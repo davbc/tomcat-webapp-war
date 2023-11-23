@@ -21,5 +21,28 @@ pipeline{
         sh 'mvn clean package'
       }
     }
+
+    stage('3. SonarQube'){
+      steps{
+        sh 'mvn sonar:sonar'
+      }
+    }
+    stage('4. Nexus'){
+      steps{
+        sh 'mvn deploy'
+      }
+    }
+    stage('5. Approve'){
+      steps{
+        timeout(time: 3, unit: 'DAYS') {
+         input message: "please approve"  
+        }
+      }
+    }
+    stage('6. Deploy'){
+      steps{
+        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://54.209.168.21:8080/')], contextPath: '/script', onFailure: false, war: 'target/*war'
+      }
+    }
   }
 }
