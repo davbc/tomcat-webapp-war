@@ -16,4 +16,8 @@ node {
     echo "code quality scan"
     sh "${mvnHome}/bin/mvn sonar:sonar"
   }
+  stage('4. Nexus'){
+    echo "Nexus Artifactory"
+    sh "${mvnHome}/bin/mvn deploy"
+  }
 }
