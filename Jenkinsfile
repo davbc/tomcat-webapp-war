@@ -10,7 +10,7 @@ pipeline{
     pollSCM('* * * * *')
   }
   stages {
-    stage('1. Git'){
+    stage('1. Clone'){
       steps {
         git branch: 'Declarative', changelog: false, poll: false, url: 'https://github.com/davbc/tomcat-webapp-war.git'
       }
