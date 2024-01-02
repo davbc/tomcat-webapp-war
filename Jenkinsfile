@@ -41,7 +41,7 @@ pipeline{
     }
     stage('6. Deploy'){
       steps{
-        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://54.209.168.21:8080/')], contextPath: '/script', onFailure: false, war: 'target/*war'
+       sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible-server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//tomcat', remoteDirectorySDF: false, removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
       }
     }
   }
