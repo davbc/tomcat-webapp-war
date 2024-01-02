@@ -12,7 +12,7 @@ pipeline{
   stages {
     stage('1. Clone'){
       steps {
-        git branch: 'Declarative', changelog: false, poll: false, url: 'https://github.com/davbc/tomcat-webapp-war.git'
+        git branch: 'Declarative', url: 'https://github.com/davbc/tomcat-webapp-war.git'
       }
     }
 
