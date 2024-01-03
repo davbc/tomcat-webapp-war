@@ -21,12 +21,13 @@ pipeline{
         sh 'mvn clean package'
       }
     }
-/*
+
     stage('3. SonarQube'){
       steps{
         sh 'mvn sonar:sonar'
       }
     }
+    /*
     stage('4. Nexus'){
       steps{
         sh 'mvn deploy'
