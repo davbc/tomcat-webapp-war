@@ -15,7 +15,7 @@ pipeline{
         git branch: 'Declarative', url: 'https://github.com/davbc/tomcat-webapp-war.git'
       }
     }
-
+/*
     stage('2. Maven'){
       steps{
         sh 'mvn clean package'
@@ -46,6 +46,6 @@ pipeline{
        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible-server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook /home/ansible/jenkins/webapp.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//home//ansible//jenkins', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
       }
     }
-    
+    */
   }
 }
