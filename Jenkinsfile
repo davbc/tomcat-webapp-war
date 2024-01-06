@@ -27,7 +27,7 @@ pipeline{
         sh 'mvn sonar:sonar'
       }
     }
-    /*
+    
     stage('4. Nexus'){
       steps{
         sh 'mvn deploy'
@@ -40,7 +40,7 @@ pipeline{
         }
       }
     }
-    
+    /*
     stage('6. Deploy'){
       steps{
        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible-server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook /home/ansible/jenkins/webapp.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//home//ansible//jenkins', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
