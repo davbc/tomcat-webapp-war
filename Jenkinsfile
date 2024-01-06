@@ -15,7 +15,7 @@ pipeline{
         git branch: 'Declarative', url: 'https://github.com/davbc/tomcat-webapp-war.git'
       }
     }
-/*
+
     stage('2. Maven'){
       steps{
         sh 'mvn clean package'
@@ -27,7 +27,7 @@ pipeline{
         sh 'mvn sonar:sonar'
       }
     }
-    
+    /*
     stage('4. Nexus'){
       steps{
         sh 'mvn deploy'
