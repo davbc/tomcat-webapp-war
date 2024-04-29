@@ -12,7 +12,7 @@
 			  font-size:48px;
 			}
 		</style>
-		<title> SHLLC - Tomcat WebApp </title>
+		<title> LANTECH - Tomcat WebApp </title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 <body>
@@ -34,7 +34,7 @@
 	<hr>
 
 	<h2>
-		Welcome to SHLLC - Congrats on deploying your first Web App 
+		Welcome to LANTECH - Congrats on deploying your first Web App 
 	</h2>
 	<br>
 	<div id="div2" class="fa"></div>
